@@ -1,7 +1,7 @@
 {
   "name": "react-animate-height-auto",
-  "version": "1.0.0",
-  "description": "react-animate-height-auto React component",
+  "version": "0.0.1",
+  "description": "A component that animates to height auto",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -20,18 +20,16 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "16.x"
+    "react": ">= 15.0.0 <17.0.0"
   },
   "devDependencies": {
     "nwb": "0.21.x",
     "react": "16.2.0",
     "react-dom": "16.2.0"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Thomas Cheng",
   "license": "MIT",
-  "repository": "",
   "keywords": [
-    "react-component"
+    "react-component", "animation", "height", "auto"
   ]
 }

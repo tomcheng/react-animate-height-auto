@@ -24,7 +24,7 @@ class Demo extends Component {
         <h1>react-animate-height-auto Demo</h1>
         <button onClick={this.handleClickToggle}>Toggle</button>
         <hr />
-        <AnimateHeight isExpanded={isExpanded} duration={300} fadeFirst>
+        <AnimateHeight isExpanded={isExpanded}>
           <div style={{ padding: 20 }}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
             commodo ligula eget dolor. Aenean massa. Cum sociis natoque

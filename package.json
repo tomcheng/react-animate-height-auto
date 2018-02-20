@@ -1,6 +1,6 @@
 {
   "name": "react-animate-height-auto",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A component that animates to height auto",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -30,6 +30,9 @@
   "author": "Thomas Cheng",
   "license": "MIT",
   "keywords": [
-    "react-component", "animation", "height", "auto"
+    "react-component",
+    "animation",
+    "height",
+    "auto"
   ]
 }

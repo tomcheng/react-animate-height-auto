@@ -1,23 +1,36 @@
-import expect from 'expect'
-import React from 'react'
-import {render, unmountComponentAtNode} from 'react-dom'
+import expect from "expect";
+import React from "react";
+import { render, unmountComponentAtNode, findDOMNode } from "react-dom";
 
-import Component from 'src/'
+import AnimateHeight from "src/";
 
-describe('Component', () => {
-  let node
+describe("AnimateHeight", () => {
+  let node;
+  let component;
 
   beforeEach(() => {
-    node = document.createElement('div')
-  })
+    node = document.createElement("div");
+  });
 
   afterEach(() => {
-    unmountComponentAtNode(node)
-  })
+    unmountComponentAtNode(node);
+  });
 
-  it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
-    })
-  })
-})
+  it("shows content when expanded", () => {
+    render(<AnimateHeight ref={el => { component = el; }} isExpanded>foo</AnimateHeight>, node, () => {
+      const componentNode = findDOMNode(component);
+
+      expect(node.innerHTML).toContain("foo");
+      expect(componentNode.style.height).toEqual("auto");
+    });
+  });
+
+  it("hides content when not expanded", () => {
+    render(<AnimateHeight ref={el => { component = el; }} isExpanded={false}>foo</AnimateHeight>, node, () => {
+      const componentNode = findDOMNode(component);
+
+      expect(node.innerHTML).toContain("foo");
+      expect(componentNode.style.height).toEqual("0px");
+    });
+  });
+});

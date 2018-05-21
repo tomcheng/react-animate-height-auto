@@ -2,7 +2,11 @@
 
 A wrapper component that animates to your content's natural height
 
-## Usage
+```bash
+npm install --save react-animate-height-auto
+```
+
+### Usage
 ```javascript
 import React, { Component } from "react";
 import { render } from "react-dom";
